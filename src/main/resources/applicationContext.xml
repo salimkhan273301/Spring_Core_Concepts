@@ -6,7 +6,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
                
-       <bean id = "student" class = "com.corespring.Student">
+     <!--   <bean id = "student" class = "com.corespring.Student">
          <property name="id"  value= "10"></property>
          <property name="name"  value= "Salim"></property>
          <property name="email"  value= "ajadi273301@gmail.com"></property>
@@ -14,10 +14,28 @@
        
        <bean id = "address"  class = "com.corespring.Address">
        
-       <!-- <property name="id" value="102"></property>
-       <property name="address" value="Jaddu Pipra"></property> -->
+       <property name="id" value="102"></property>
+       <property name="address" value="Jaddu Pipra"></property>
        
        <constructor-arg value="103" type="int"></constructor-arg>
        <constructor-arg value="JadduPipra Maharaj Ganj" type="String"></constructor-arg>
-       </bean>
+       </bean> -->
+       
+       
+       <bean id="a1" class="com.corespring.model.Address">  
+<constructor-arg value="Maharajganj"></constructor-arg>  
+<constructor-arg value="UP"></constructor-arg>  
+<constructor-arg value="India"></constructor-arg>  
+</bean>  
+  
+  
+<bean id="e" class="com.corespring.model.Employee">  
+<constructor-arg value="170280125" type="int"></constructor-arg>  
+<constructor-arg value="Salim Khan"></constructor-arg>  
+<constructor-arg>  
+<ref bean="a1"/>  
+</constructor-arg>  
+</bean>  
+       
+       
 </beans>
